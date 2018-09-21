@@ -1,0 +1,21 @@
+#chart-area svg {
+	margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+#logo {
+	height:50px;
+}
+
+.navbar-brand {
+	height: 60px;
+	padding: 5px 0px;
+}
+
+h1 {
+	font-family: Indie Flower;
+	font-weight: 1000;
+	text-align: center;
+	text-decoration: underline;
+}
