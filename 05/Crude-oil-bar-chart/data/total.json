@@ -1,0 +1,92 @@
+[
+	{
+		"year": "2002",
+		"production": "7090000",
+		"export": "6278200"
+	},
+	{
+		"year": "2003",
+		"production": "8410000",
+		"export": "7651500"
+	},
+	{
+		"year": "2004",
+		"production": "8900000",
+		"export": "8148100"
+	},
+	{
+		"year": "2005",
+		"production": "9350000",
+		"export": "8594200"
+	},
+	{
+		"year": "2006",
+		"production": "9210000",
+		"export": "8306900"
+	},
+	{
+		"year": "2007",
+		"production": "8820000",
+		"export": "8100900"
+	},
+	{
+		"year": "2008",
+		"production": "9200000",
+		"export": "8378100"
+	},
+	{
+		"year": "2009",
+		"production": "8180000",
+		"export": "7276200"
+	},
+	{
+		"year": "2010",
+		"production": "8170000",
+		"export": "7594500"
+	},
+	{
+		"year": "2011",
+		"production": "9310000",
+		"export": "8117800"
+	},
+	{
+		"year": "2012",
+		"production": "9764000",
+		"export": "8443800"
+	},
+	{
+		"year": "2013",
+		"production": "9630000",
+		"export": "8364800"
+	},
+	{
+		"year": "2014",
+		"production": "9713000",
+		"export": "8142500"
+	},
+	{
+		"year": "2015",
+		"production": "10190000",
+		"export": "8317800"
+	},
+	{
+		"year": "2016",
+		"production": "10460000",
+		"export": "8990400"
+	},
+	{
+		"year": "2017",
+		"production": "10014000",
+		"export": "8635400"
+	},
+	{
+		"year": "2018",
+		"production": "10049500",
+		"export": "8616300"
+	},
+	{
+		"year": "2019",
+		"production": "10146600",
+		"export": "8693700"
+	}
+]
