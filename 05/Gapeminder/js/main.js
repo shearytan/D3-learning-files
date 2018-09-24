@@ -80,7 +80,7 @@ d3.json("data/data.json").then(data => {
 		time = (time < 214) ? time + 1 : 0 
 		update(formattedData[time])
 	}, 100);
-
+	console.log(formattedData[0])
 	update(formattedData[0]);
 });
 
