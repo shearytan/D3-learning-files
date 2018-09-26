@@ -26,14 +26,10 @@ var yAxis = g.append("g")
 
 var line = d3.line()
     .x((d) => {return x(d.year)})
-    .y((d) => {return y(d.production)});
-
-var line1 = d3.line()
-    .x((d) => {return x(d.year)})
-    .y((d) => {return y(d.export)})
+    .y((d) => {return y(d.production)})
+    .curve(d3.curveBasis)
 
 d3.json("data/total.json").then((data) => {
-    var t = d3.transition().duration(100)
     data.forEach((d) => {
         d.year = parseTime(d.year);
         d.production = +d.production;
@@ -49,13 +45,6 @@ d3.json("data/total.json").then((data) => {
         .attr("stroke", "grey")
         .attr("stroke-width", "3px")
         .attr("d", line(data));
-
-    g.append("path")
-        .attr("class", "line1")
-        .attr("fill", "none")
-        .attr("stroke", "red")
-        .attr("stroke-width", "3px")
-        .attr("d", line1(data))
         
     xAxis.call(xAxisCall.scale(x))
     yAxis.call(yAxisCall.scale(y))
