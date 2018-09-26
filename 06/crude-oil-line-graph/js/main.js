@@ -24,10 +24,35 @@ var yAxisCall = d3.axisLeft()
 var yAxis = g.append("g")
     .attr("class", "y axis")
 
+var title = g.append("text")
+    .attr("x", width / 2)
+    .attr("y", -20)
+    .attr("font-size", "35px")
+    .attr("text-anchor", "middle")
+    .attr("font-family", "Amatic SC")
+    .text("Crude Oil Prod. in Saudi Arabia")
+
+var xLabel = g.append("text")
+    .attr("y", height + 50)
+    .attr("x", width / 2)
+    .attr("font-size", "25px")
+    .attr("font-family", "Amatic SC")
+    .attr("text-anchor", "middle")
+    .text("Year")
+
+var yLabel = g.append("text")
+    .attr("y", -50)
+    .attr("x", -170)
+    .attr("transform", "rotate(-90)")
+    .attr("font-size", "25px")
+    .attr("font-family", "Amatic SC")
+    .attr("text-anchor", "middle")
+    .text("Production(x1000)")
+
 var line = d3.line()
     .x((d) => {return x(d.year)})
     .y((d) => {return y(d.production)})
-    .curve(d3.curveBasis)
+    .curve(d3.curveMonotoneX)
 
 d3.json("data/total.json").then((data) => {
     data.forEach((d) => {
@@ -65,7 +90,7 @@ d3.json("data/total.json").then((data) => {
         .attr("x2", width);
 
     focus.append("circle")
-        .attr("r", 2.5)
+        .attr("r", 3.5)
 
     focus.append("text")
         .attr("x", 15)
@@ -77,10 +102,9 @@ d3.json("data/total.json").then((data) => {
         .attr("height", height)
         .on("mouseover", function() { focus.style("display", null); })
         .on("mouseout", function() { focus.style("display", "none"); })
-        .on("mousemove", mousemove1);
+        .on("mousemove", mousemove);
 
-    var values = data.map
-    function mousemove1() {
+    function mousemove() {
         var x0 = x.invert(d3.mouse(this)[0]),
             i = bisectDate(data, x0, 1),
             d0 = data[i - 1],

@@ -37,7 +37,7 @@
 
 .focus circle {
   fill: #F1F3F3;
-  stroke: #777;
+  stroke: red;
   stroke-width: 3px;
 }
   
@@ -55,5 +55,5 @@
 .line {
   fill: none;
   stroke-width: 3px;
-  stroke: grey;
+  stroke: lightgreen;
 }
