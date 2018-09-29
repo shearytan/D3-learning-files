@@ -1,0 +1,32 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <title>Line chart</title>
+    </head>
+    <body>
+            <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script>
+            var margin = [50, 100, 100, 30], // top left bottom right
+                height = 600 - margin[0] - margin[2],
+                width = 800 - margin[1] - margin[3];
+            
+            var svg = d3.select("body").append("svg")
+                .attr("width", width + margin[1] + margin[3])
+                .attr("height", height + margin[0] + margin[2])
+            var g = svg.append("g")
+                .attr("transform", "translate(" + margin[1] + ", " + margin[0] + ")")
+                
+            var parseTime = d3.timeParse("%d/%m/%Y");
+            var bisectDate = d3.bisector((d) => { return d.date}).left;
+            
+            var x = d3.scaleTime().range([0, width])
+            var y = d3.scaleLinear().range(height, 0)
+
+            d3.csv("data/data.csv").then((data) => {
+                
+            })
+
+
+        </script>
+    </body>
+</html>
